@@ -296,7 +296,7 @@ services:
   # https://hub.docker.com/r/grafana/k6
   # https://github.com/grafana/k6
   k6:
-    image: grafana/k6:1.4.2
+    image: grafana/k6:1.5.0
     restart: no
     working_dir: /k6
     command:
