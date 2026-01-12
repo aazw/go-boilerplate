@@ -19,7 +19,7 @@ services:
   # https://hub.docker.com/_/postgres
   # https://github.com/postgres/postgres
   postgres:
-    image: postgres:17
+    image: postgres:18
     restart: always
     ports:
       - 5432:5432
@@ -87,7 +87,7 @@ services:
   # https://github.com/valkey-io/valkey
   # https://hub.docker.com/r/valkey/valkey
   valkey:
-    image: valkey/valkey:8.1.5
+    image: valkey/valkey:9.0.1
     restart: always
     ports:
       - 6379:6379
@@ -137,7 +137,7 @@ services:
   # https://hub.docker.com/r/grafana/mimir
   # https://github.com/grafana/mimir
   mimir:
-    image: grafana/mimir:2.17.4
+    image: grafana/mimir:3.0.2
     restart: always
     ports:
       - '9009:9009'
@@ -277,7 +277,7 @@ services:
   # https://hub.docker.com/r/redocly/cli
   # https://github.com/Redocly/redocly-cli
   redocly-preview:
-    image: redocly/cli:1.34.6
+    image: redocly/cli:2.14.3
     restart: always
     ports:
       - '18080:8080'
