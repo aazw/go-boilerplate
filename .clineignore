@@ -1,8 +1,0 @@
-# すべてのファイルを無視
-/*
-
-# workspaceディレクトリだけ許可
-!/workspace
-
-# gitingestな出力ファイルを除去(大きいので)
-digest.txt

@@ -1,6 +1,3 @@
-# gitingest
-digest.txt
-
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node,yarn,go
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,node,yarn,go
 
@@ -259,3 +256,30 @@ $RECYCLE.BIN/
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node,yarn,go
+
+# Temporary directory
+tmp
+tmp/*
+
+# Ignore core dump files
+core
+core.*
+
+# Claude Code data (mount from ~/.claude/* to .claude-home-cache/ to cache claude code sessions)
+.claude-home-cache/*
+!.claude-home-cache/.gitkeep
+
+# Codex data
+.codex/*
+
+# Nix/Devbox
+**/.devbox
+
+# Go binaries
+bin/
+bin/*
+**/bin/
+**/bin/*
+
+# gitingest/repomix
+digest.txt

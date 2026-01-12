@@ -3,7 +3,9 @@
     "emeraldwalk.RunOnSave",
     "ms-azuretools.vscode-containers",
     "ms-azuretools.vscode-docker",
-    "golang.go",
-    "saoudrizwan.claude-dev"
+    "tamasfe.even-better-toml",
+    "anthropic.claude-code",
+    "openai.chatgpt",
+    "golang.go"
   ]
 }

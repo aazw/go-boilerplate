@@ -11,6 +11,28 @@ tasks:
       - task --list-all
     silent: true
 
+  remove_system_files:
+    dir: "{{ .TASKFILE_DIR }}"
+    cmds:
+      - find . -name ".DS_Store" -type f -delete -print
+      - find . -name "core" -type f -delete -print
+    silent: false
+
+  init:
+    dir: "{{ .TASKFILE_DIR }}"
+    cmds:
+      # remove system files
+      - task remove_system_files
+      # キャッシュクリア (skillsの読み込み時にcacheが悪さすることが多い)
+      - rm -rf ./.claude-home-cache/plugins/cache/*
+    silent: false
+
+  fmt:
+    dir: "{{ .TASKFILE_DIR }}"
+    cmds:
+      - treefmt
+    silent: false
+
   devcontainer_build:
     dir: '{{ .TASKFILE_DIR }}'
     cmds:
@@ -83,22 +105,10 @@ tasks:
       - ./scripts/oapi-codegen.sh
     silent: true
 
-  prettier:
-    dir: '{{ .TASKFILE_DIR }}'
-    cmds:
-      - ./scripts/prettier.sh
-    silent: true
-
   redocly_join:
     dir: '{{ .TASKFILE_DIR }}'
     cmds:
       - ./scripts/redocly_join.sh
-    silent: true
-
-  remove_ds_store:
-    dir: '{{ .TASKFILE_DIR }}'
-    cmds:
-      - ./scripts/remove_ds_store.sh
     silent: true
 
   renovate_dry_run:

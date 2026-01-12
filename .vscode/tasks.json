@@ -2,6 +2,51 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Remove all system files",
+      "type": "shell",
+      "command": "task remove_system_files",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {}
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Init project",
+      "type": "shell",
+      "command": "task init",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {}
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Format files",
+      "type": "shell",
+      "command": "task fmt",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {}
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "devcontainer_build.sh",
       "type": "shell",
       "command": "task devcontainer_build",
@@ -11,7 +56,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -25,7 +71,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -39,7 +86,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -53,7 +101,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -67,7 +116,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -81,7 +131,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -95,7 +146,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -109,7 +161,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -123,7 +176,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -137,7 +191,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -151,7 +206,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -165,21 +221,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
-    },
-    {
-      "label": "prettier.sh",
-      "type": "shell",
-      "command": "task prettier",
-      "group": "none",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -193,21 +236,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
-    },
-    {
-      "label": "remove_ds_store.sh",
-      "type": "shell",
-      "command": "task remove_ds_store",
-      "group": "none",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -221,7 +251,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -235,7 +266,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     },
@@ -249,7 +281,8 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "env": {}
       },
       "problemMatcher": [] // 空配列を指定すると「このタスクの出力をスキャンしない」が固定化される
     }

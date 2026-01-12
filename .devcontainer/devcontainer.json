@@ -1,12 +1,11 @@
 {
-  "name": "vsc-go-base",
+  "name": "vsc-go-boilerplate-${localWorkspaceFolderBasename}-${devcontainerId}",
   "dockerComposeFile": [
     // ここに改行入れておけばPrettierによって配列が1行にならない
     "../compose.yaml",
     "./compose.yaml"
   ],
   "service": "devcontainer",
-  "workspaceFolder": "/workspace",
   "runServices": [
     // ここに改行入れておけばPrettierによって配列が1行にならない
     "postgres",
@@ -25,7 +24,11 @@
     "redocly-preview"
   ],
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true",
+      "moby": "true"
+    }
   },
   "customizations": {
     "vscode": {
@@ -33,6 +36,9 @@
         "emeraldwalk.RunOnSave",
         "ms-azuretools.vscode-containers",
         "ms-azuretools.vscode-docker",
+        "tamasfe.even-better-toml",
+        "anthropic.claude-code",
+        "openai.chatgpt",
         "golang.go"
       ],
       "settings": {
@@ -43,11 +49,17 @@
       }
     }
   },
+  // "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind,consistency=cached",
+  // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspace",
+  "containerUser": "root",
   "remoteUser": "vscode",
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
-    "GOAPP_CONFIG": "config/goapp/config.yaml",
-    "TZ": "Asia/Tokyo"
+    "TZ": "Asia/Tokyo",
+    "TASK_X_ENV_PRECEDENCE": "1",
+    "GOAPP_CONFIG": "config/goapp/config.yaml"
   },
+  "postAttachCommand": "task init",
   "shutdownAction": "stopCompose"
 }
