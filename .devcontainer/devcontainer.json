@@ -58,6 +58,7 @@
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
     "TZ": "Asia/Tokyo",
     "TASK_X_ENV_PRECEDENCE": "1",
+    "CGO_ENABLED": "0",
     "GOAPP_CONFIG": "config/goapp/config.yaml"
   },
   "postAttachCommand": "task init",
