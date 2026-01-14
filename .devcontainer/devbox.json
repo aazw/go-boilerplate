@@ -39,6 +39,13 @@
     // ※ ibm-openapi-validator/spectral の代替としても使用
     //    デフォルトルールは同等のカバレッジ (operationId, パス, レスポンス, セキュリティ等)
     //    追加機能: ドキュメント生成、バンドル/分割
-    "redocly@2.12.6"
+    "redocly@2.12.6",
+
+    // 負荷試験ツール
+    // https://github.com/grafana/k6
+    // https://search.nixos.org/packages?show=k6&query=k6
+    // https://www.nixhub.io/packages/k6
+    // https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/k6/k6/package.nix
+    "k6@1.4.2"
   ]
 }
