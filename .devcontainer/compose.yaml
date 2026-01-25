@@ -3,11 +3,12 @@ services:
     container_name: vsc-go-boilerplate
     build:
       context: ./.devcontainer
-    working_dir: /workspace
+    working_dir: /workspaces
     tty: true
     volumes:
-      - ${LOCAL_WORKSPACE_FOLDER:-.}:/workspace:cached
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${LOCAL_WORKSPACE_FOLDER:-.}/..:/workspaces:cached
+      - ${LOCAL_WORKSPACE_FOLDER:-.}/.claude-home-cache:/home/vscode/.claude
+      - ${LOCAL_WORKSPACE_FOLDER:-.}/.codex-home-cache:/home/vscode/.codex
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     cap_add:

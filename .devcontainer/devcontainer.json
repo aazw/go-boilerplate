@@ -50,8 +50,7 @@
     }
   },
   // "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind,consistency=cached",
-  // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "containerUser": "root",
   "remoteUser": "vscode",
   "remoteEnv": {
