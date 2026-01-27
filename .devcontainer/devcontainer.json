@@ -5,6 +5,7 @@
     "../compose.yaml",
     "./compose.yaml"
   ],
+  "initializeCommand": "bash -lc 'mkdir -p \"${localWorkspaceFolder}/.devcontainer/.state/claude\" \"${localWorkspaceFolder}/.devcontainer/.state/codex\"'",
   "service": "devcontainer",
   "runServices": [
     // ここに改行入れておけばPrettierによって配列が1行にならない

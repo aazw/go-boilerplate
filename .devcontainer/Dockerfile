@@ -10,7 +10,7 @@ COPY --chown=${DEVBOX_USER}:${DEVBOX_USER} devbox.lock devbox.lock
 RUN devbox install
 
 
-FROM aazw/devcontainers-devbox-go:7 AS runtime
+FROM aazw/devcontainers-devbox-go:9 AS runtime
 
 USER root
 COPY --from=builder /nix/store /nix/store
@@ -18,6 +18,3 @@ COPY --from=builder /code/go-boilerplate/.devbox /code/go-boilerplate/.devbox
 USER vscode
 
 ENV PATH="/code/go-boilerplate/.devbox/nix/profile/default/bin:${PATH}"
-
-
-
